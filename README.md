@@ -1,0 +1,2 @@
+# narugakuru.github.io
+MyHexoBlog
