@@ -32,5 +32,8 @@
         "search-insights"
       ]
     }
+  },
+  "resolutions": {
+    "oh-my-live2d": "^0.17.0"
   }
 }
