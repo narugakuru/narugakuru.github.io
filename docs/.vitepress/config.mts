@@ -17,8 +17,8 @@ export default defineConfig({
   extends: blogTheme,
   // base: ,
   lang: 'zh-cn',
-  title: 'Raisei博客',
-  description: '粥里有勺糖的博客主题，基于 vitepress 实现',
+  title: '小岚岚的博客',
+  description: '@sugarat/theme主题',
   lastUpdated: true,
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
@@ -46,7 +46,7 @@ export default defineConfig({
     // },
     nav: [
       { text: '首页', link: '/' },
-      { text: '关于作者', link: 'https://sugarat.top/aboutme.html' }
+      { text: '关于作者', link: 'https://narugakuru.github.io' }
     ],
     socialLinks: [
       {
