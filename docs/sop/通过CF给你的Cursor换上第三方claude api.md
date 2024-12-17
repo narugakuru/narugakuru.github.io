@@ -14,7 +14,11 @@ sticky: 10
 可以使用modelMapping来映射模型，从而达到绕过cursor模型匹配机制的效果
 直接使用claude-3-5-sonnet-20241022会走官方claude的api，但是调用one-3-5-sn，再用work偷梁换柱就可以走自己买的第三方api
 
-调用请求示例
+**功能**
+- api代理，如果是调用官方渠道cf应该可以减轻封号的风险？
+- 可根据url路径自定义api供应商，apikey不变，仅需替换baseurl；基本就是为替换cursor claude api定制的
+
+**调用请求示例**
 - https://你的CF域名/api供应商域名
 - https://你的CF域名/api供应商域名/v1
 
