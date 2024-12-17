@@ -1,14 +1,24 @@
 ---
 title: Cursor自定义Claude API
-tags: 
+tags:
+  - 服务器
 date created: 2024-12-17
 date modified: 2024-12-17
+sticky: 10
 ---
-调用请求示例
-https://你的CF域名/api供应商域名
-https://你的CF域名/api供应商域名/v1
 
-```
+给你的Cursor换上第三方claude api , work的创建方法见参考文章1
+
+# 定制Cursor api的work代码
+
+可以使用modelMapping来映射模型，从而达到绕过cursor模型匹配机制的效果
+直接使用claude-3-5-sonnet-20241022会走官方claude的api，但是调用one-3-5-sn，再用work偷梁换柱就可以走自己买的第三方api
+
+调用请求示例
+- https://你的CF域名/api供应商域名
+- https://你的CF域名/api供应商域名/v1
+
+```js
 const modelMapping = {
     "one-3-5-sn": "claude-3-5-sonnet-20241022",
     "one-3-5-hk": "claude-3-5-haiku-20241022",
@@ -68,3 +78,8 @@ export default {
 };
 
 ```
+
+# 参考文章
+
+- [使用Cf Workers搭建反代加速器 | LiuShen's Blog](https://blog.liushen.fun/posts/dd89adc9/)
+- [Cursor 使用 One API 配置 Anthropic Claude BaseURL 代理指南_cursor oneapi-CSDN博客](https://blog.csdn.net/zhq426/article/details/141982668)
